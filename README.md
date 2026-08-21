@@ -474,33 +474,6 @@ This exercise highlighted the importance of information gathering as a foundatio
 13     └── Evidence/ 
 
  
-
-🏆 Program Information 
-
-Item 
-
-Value 
-
-Program 
-
-Networkwalks Cybersecurity Program 
-
-Batch 
-
-B082 
-
-Week 
-
-02 
-
-Project Type 
-
-Penetration Testing 
-
-Focus Area 
-
-Footprinting & Network Scanning 
-
  
 
 📜 Conclusion 
