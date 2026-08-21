@@ -1,480 +1,358 @@
-# NETWORKWALKS-B082-WEEK2-PHASE1-2
+# Penetration Testing Report: Footprinting & Network Scanning
 
- 
+🛡️ **Week 2 Cybersecurity Internship Project** | NetworkWalks Batch B082
 
-🛡️ Penetration Testing Report: Footprinting & Network Scanning Phases 
+---
 
+## Table of Contents
 
-👨‍💻 Author 
+- [About](#about)
+- [Project Overview](#project-overview)
+- [Disclaimer](#disclaimer)
+- [Objectives](#objectives)
+- [Tools & Technologies](#tools--technologies)
+- [Phases](#phases)
+  - [Phase 1: Reconnaissance & Footprinting](#phase-1-reconnaissance--footprinting)
+  - [Phase 2: Network Scanning](#phase-2-network-scanning)
+- [Key Findings](#key-findings)
+- [Risk Analysis](#risk-analysis)
+- [Recommendations](#recommendations)
+- [Learning Outcomes](#learning-outcomes)
+- [Repository Structure](#repository-structure)
+- [Conclusion](#conclusion)
 
-Mohammed Sadiq Bandiya 
-Cybersecurity Professional | Ethical Hacking Enthusiast 
+---
 
-🔗 LinkedIn: https://www.linkedin.com/in/mohammed-sadiq-bandiya-80117017 
+## About
 
- 
+**Author:** Mohammed Sadiq Bandiya  
+**Role:** Cybersecurity Professional | Ethical Hacking Enthusiast  
+**LinkedIn:** https://www.linkedin.com/in/mohammed-sadiq-bandiya-80117017
 
-📌 Project Overview 
+---
 
-This repository contains my Week 2 Cybersecurity Internship Project completed as part of the Networkwalks Cybersecurity Program (Batch B082). 
+## Project Overview
 
-The project focuses on two critical phases of a penetration testing engagement: 
+This repository documents my Week 2 Cybersecurity Internship Project completed as part of the NetworkWalks Cybersecurity Program (Batch B082).
 
-Reconnaissance & Footprinting 
+The project focuses on two critical phases of a penetration testing engagement:
 
-Network Scanning & Discovery 
+1. **Reconnaissance & Footprinting** - Gathering publicly available information about target organizations
+2. **Network Scanning & Discovery** - Identifying live systems within authorized networks
 
-The objective was to learn how security professionals and attackers gather publicly available information about a target organization and discover live systems within a network before performing deeper security assessments. 
+The objective was to learn how security professionals and ethical hackers perform reconnaissance and discover network infrastructure before conducting deeper security assessments.
 
- 
+---
 
-⚠️ Disclaimer 
+## Disclaimer
 
-All activities documented in this repository were performed only on systems: 
+⚠️ **Important:** All activities documented in this repository were performed only on systems that I:
 
-Owned by me, or Explicitly authorized for testing through written permission. 
+- Own, or
+- Have explicit written permission to test
 
-This project is strictly for educational, training, and research purposes. Unauthorized scanning, probing, or access to systems you do not own or have permission to test may violate laws and regulations. 
+This project is strictly for **educational, training, and research purposes only**. Unauthorized scanning, probing, or access to systems you do not own or have permission to test may violate applicable laws and regulations.
 
- 
+---
 
-🎯 Objectives 
+## Objectives
 
-The objectives of this project were to: 
+The primary objectives of this project were to:
 
-Perform passive and active reconnaissance. 
+- ✅ Perform passive and active reconnaissance
+- ✅ Gather public information about target domains
+- ✅ Enumerate DNS records and web technologies
+- ✅ Identify exposed infrastructure details
+- ✅ Discover active hosts on local networks
+- ✅ Create network topology documentation
+- ✅ Analyze findings and assess potential security risks
+- ✅ Produce professional penetration testing documentation
 
-Gather public information about a target domain. 
+---
 
-Enumerate DNS records and web technologies. 
+## Tools & Technologies
 
-Identify exposed infrastructure details. 
+| Tool | Purpose |
+|------|---------|
+| **Kali Linux** | Operating system for reconnaissance activities |
+| **WHOIS** | Domain registration information gathering |
+| **WhatWeb** | Website technology fingerprinting |
+| **Nslookup** | DNS resolution and IP discovery |
+| **Curl** | HTTP header analysis |
+| **Wafw00f** | Web Application Firewall detection |
+| **DNSRecon** | DNS enumeration and record discovery |
+| **GHDB** | Google Hacking Database for reconnaissance |
+| **Zenmap** | Network discovery and host scanning (Nmap GUI) |
+| **Windows Command Prompt** | Network configuration verification |
 
-Discover active hosts on a local network. 
+### Modules Completed
 
-Create network topology documentation. 
+- **W2-PM1** - Footprinting & Reconnaissance Attacks with Multiple Kali Tools
+- **W2-PM2** - Footprinting & Reconnaissance Attacks with GHDB
+- **W2-PM5** - Network Scanning with Zenmap
 
-Analyze findings and assess potential security risks. 
+---
 
-Produce professional penetration testing documentation. 
+## Phases
 
- 
+### Phase 1: Reconnaissance & Footprinting
 
-🛠️ Tools Used 
+The reconnaissance phase focused on collecting publicly available information regarding the target domain.
 
-Tool 
+#### 1.1 WHOIS Enumeration
 
-Purpose 
+**Tools Used:** WHOIS  
+**Information Gathered:**
+- Domain registration information
+- Registrar details
+- Domain creation and expiration dates
+- Name server information
 
-Kali Linux 
+**Purpose:** Understanding domain ownership and infrastructure configuration.
 
-Operating system for reconnaissance activities 
+---
 
-WHOIS 
+#### 1.2 WhatWeb Fingerprinting
 
-Domain registration information gathering 
+**Tools Used:** WhatWeb  
+**Technologies Identified:**
+- Web server technologies
+- CMS platforms and versions
+- Installed plugins
+- Cookies and tracking
+- Web framework information
 
-WhatWeb 
+**Findings:**
+- Apache Web Server
+- WordPress CMS
+- WordPress Download Manager Plugin
+- Additional web technology fingerprints
 
-Website technology fingerprinting 
+**Purpose:** Technology fingerprinting helps identify technologies requiring further security review.
 
-Nslookup 
+---
 
-DNS resolution and IP discovery 
+#### 1.3 DNS Resolution with Nslookup
 
-Curl 
+**Tools Used:** Nslookup  
+**Activities:**
+- Resolved target domain
+- Obtained associated IP addresses
 
-HTTP header analysis 
+**Purpose:** Mapping domains to infrastructure resources.
 
-Wafw00f 
+---
 
-Web Application Firewall detection 
+#### 1.4 HTTP Header Analysis with Curl
 
-DNSRecon 
+**Tools Used:** Curl  
+**Command:** `curl -I https://target-domain.com`
 
-DNS enumeration 
+**Information Obtained:**
+- Server response details
+- Security headers
+- API exposure indicators
+- Application behavior characteristics
 
-GHDB (Google Hacking Database) 
+**Purpose:** Understanding server configuration and potential information disclosure.
 
-Google Dork reconnaissance 
+---
 
-Zenmap (Nmap GUI) 
+#### 1.5 WAF Detection using Wafw00f
 
-Network discovery and host scanning 
+**Tools Used:** Wafw00f  
+**Identified:**
+- Web Application Firewall presence
+- Protection technologies deployed
 
-Windows Command Prompt 
+**Finding:** ModSecurity (SpiderLabs) detected
 
-Network configuration verification 
+**Purpose:** Understanding defensive controls protecting web applications.
 
- 
+---
 
-📚 Modules Completed 
+#### 1.6 DNS Enumeration using DNSRecon
 
-W2-PM1 
+**Tools Used:** DNSRecon  
+**Records Enumerated:**
+- A Records
+- MX Records
+- NS Records
+- TXT Records
+- SPF Records
+- SRV Records
 
-Footprinting & Reconnaissance Attacks with Multiple Kali Tools 
+**Purpose:** Building a comprehensive infrastructure profile of the target environment.
 
-W2-PM2 
+---
 
-Footprinting & Reconnaissance Attacks with GHDB 
+#### 1.7 Google Hacking Database (GHDB)
 
-W2-PM5 
+**Tools Used:** Google Dorks  
+**Information Demonstrated:**
+- Login portals publicly indexed
+- Open directories
+- Documents and archives
+- Configuration files
+- Internet-facing assets
 
-Network Scanning with Zenmap 
+**Purpose:** Understanding how search engines may expose sensitive organizational information.
 
- 
+---
 
-🔍 Phase 1: Reconnaissance & Footprinting 
+### Phase 2: Network Scanning
 
-The reconnaissance phase focused on collecting publicly available information regarding the target domain. 
+Network scanning was performed against an authorized local network using Zenmap.
 
-Activities Performed 
+#### 2.1 Network Discovery
 
-WHOIS Enumeration 
+**Step 1: Identify Local Network Configuration**
 
-Used WHOIS to gather: 
+Command: `ipconfig`
 
-Domain registration information 
+Information Gathered:
+- Local IP address
+- Default gateway
+- Subnet information
 
-Registrar details 
+**Step 2: Host Discovery with Zenmap**
 
-Domain creation and expiration dates 
+Activities Performed:
+- Ping Scan
+- Live Host Discovery
+- MAC Address Enumeration
 
-Name server information 
+Discovered:
+- Active hosts on the subnet
+- Device information
+- Network accessibility status
 
-Purpose: Understanding domain ownership and infrastructure configuration. 
+**Step 3: Network Topology Mapping**
 
- 
+Generated Outputs:
+- Network topology visualization
+- Device relationship mapping
+- Infrastructure overview
 
-WhatWeb Fingerprinting 
+---
 
-Used WhatWeb to identify: 
+## Key Findings
 
-Web server technologies 
+| Finding | Description | Implication |
+|---------|-------------|-------------|
+| **Technology Exposure** | Web technologies and plugin versions publicly visible | Enables targeted attack research |
+| **IP Disclosure** | Domain successfully resolved to public IP | Reveals hosting infrastructure |
+| **HTTP Information Exposure** | Server headers disclose technical details | Facilitates reconnaissance |
+| **WAF Detection** | ModSecurity identified as protection layer | Documents defensive controls |
+| **DNS Exposure** | DNS records reveal infrastructure information | Maps network architecture |
+| **Live Hosts Detected** | Multiple active hosts in local environment | Identifies assessment targets |
 
-CMS platforms 
+---
 
-Plugins 
+## Risk Analysis
 
-Cookies 
+| Risk | Potential Impact | Severity |
+|------|-----------------|----------|
+| **Technology Fingerprinting** | Facilitates targeted attacks based on known vulnerabilities | Medium-High |
+| **Infrastructure Disclosure** | Reveals network architecture and relationships | Medium |
+| **DNS Enumeration** | Provides reconnaissance intelligence for attackers | Medium |
+| **Header Exposure** | Assists attacker profiling and reconnaissance efforts | Low-Medium |
+| **Network Device Visibility** | Identifies active systems for further assessment | Medium |
+| **Public Information Exposure** | Expands overall attack surface awareness | Medium |
 
-Web framework information 
+**⚠️ Important Note:** These observations are informational findings and do not represent confirmed vulnerabilities. Further authorized testing would be required to determine actual exploitability and prioritize remediation efforts.
 
-Findings 
+---
 
-Apache Web Server 
+## Recommendations
 
-WordPress CMS 
+### Web Security
 
-WordPress Download Manager Plugin 
+- Minimize unnecessary technology disclosure in HTTP headers
+- Regularly update CMS platforms and plugins
+- Review publicly accessible application metadata
+- Implement security headers to limit information exposure
+- Monitor for outdated or vulnerable components
 
-Additional web technology fingerprints 
+### DNS Security
 
-Purpose: Technology fingerprinting helps identify technologies requiring further security review. 
+- Periodically review DNS records for accuracy and necessity
+- Remove obsolete or unused DNS entries
+- Monitor publicly exposed services and subdomains
+- Implement DNSSEC where applicable
+- Restrict DNS zone transfers
 
- 
+### Network Security
 
-DNS Resolution with Nslookup 
+- Conduct regular internal network scans and audits
+- Maintain accurate and up-to-date asset inventories
+- Investigate and document unknown devices promptly
+- Update network diagrams regularly
+- Implement network segmentation
 
-Resolved the target domain and obtained its IP address. 
+### Security Operations
 
-Purpose: Mapping domains to infrastructure resources. 
+- Continuously monitor WAF effectiveness and logs
+- Perform periodic vulnerability assessments
+- Maintain a regular penetration testing schedule
+- Ensure all testing activities remain within authorized scope
+- Document all security testing activities
 
- 
+---
 
-HTTP Header Analysis with Curl 
+## Learning Outcomes
 
-Inspected HTTP response headers using: 
+Through this project, I gained practical experience in:
 
-1     curl -I https://target-domain.com 
+- ✓ Reconnaissance methodology and best practices
+- ✓ Open-source intelligence gathering (OSINT)
+- ✓ Domain and DNS enumeration techniques
+- ✓ Web application fingerprinting
+- ✓ Infrastructure and network discovery
+- ✓ Network scanning and host enumeration
+- ✓ Risk assessment and analysis
+- ✓ Professional cybersecurity reporting
 
-Information obtained included: 
+This exercise highlighted the importance of information gathering as a foundational phase of penetration testing and demonstrated how publicly available information can significantly contribute to overall security risk.
 
-Server responses 
+---
 
-Security headers 
+## Repository Structure
 
-API exposure indicators 
+```
+.
+├── README.md                          # Project documentation
+├── Report/
+│   └── W2-PM-FINAL-Report.pdf        # Comprehensive penetration testing report
+├── Screenshots/
+│   ├── whois.png                      # WHOIS enumeration results
+│   ├── whatweb.png                    # Web technology fingerprinting
+│   ├── nslookup.png                   # DNS resolution results
+│   ├── curl.png                       # HTTP header analysis
+│   ├── wafw00f.png                    # WAF detection results
+│   ├── dnsrecon.png                   # DNS enumeration results
+│   └── zenmap.png                     # Network scanning results
+└── Evidence/                          # Supporting documentation and evidence
+```
 
-Application response behavior 
+---
 
- 
+## Conclusion
 
-WAF Detection using Wafw00f 
+This project successfully demonstrated the practical application of penetration testing methodologies during the reconnaissance and scanning phases. Through the use of industry-standard tools such as WHOIS, DNSRecon, Zenmap, and others, I developed a comprehensive understanding of how to conduct systematic reconnaissance and network discovery.
 
-Identified: 
+The experience reinforced the critical importance of:
 
-Web Application Firewall presence 
+- Conducting **ethical and authorized** security assessments
+- Maintaining **clear, professional documentation** throughout the testing lifecycle
+- Understanding the **complete scope and authorization** before initiating any testing activities
+- Properly analyzing findings and providing **actionable recommendations**
 
-Protection technologies 
+This foundational knowledge serves as a stepping stone for more advanced penetration testing phases and demonstrates the practical application of cybersecurity principles in real-world scenarios.
 
-Finding 
+---
 
-ModSecurity (SpiderLabs) 
+**License:** Educational Use Only  
+**Last Updated:** August 2026  
+**Status:** Complete
 
-Purpose: Understanding defensive controls protecting web applications. 
-
- 
-
-DNS Enumeration using DNSRecon 
-
-Enumerated: 
-
-A Records 
-
-MX Records 
-
-NS Records 
-
-TXT Records 
-
-SPF Records 
-
-SRV Records 
-
-Purpose: Building an infrastructure profile of the target environment. 
-
- 
-
-Google Hacking Database (GHDB) 
-
-Used Google Dorks to identify publicly indexed information. 
-
-The exercise demonstrated how search engines may expose: 
-
-Login portals 
-
-Open directories 
-
-Documents 
-
-Configuration files 
-
-Internet-facing assets 
-
- 
-
-🌐 Phase 2: Network Scanning 
-
-Network scanning was performed against an authorized local network using Zenmap. 
-
- 
-
-Network Discovery 
-
-The following steps were carried out: 
-
-1. Identify Local Network Configuration 
-
-Using: 
-
-1     ipconfig 
-
-Information gathered: 
-
-Local IP address 
-
-Default Gateway 
-
-Subnet Information 
-
- 
-
-2. Host Discovery with Zenmap 
-
-Performed: 
-
-Ping Scan 
-
-Live Host Discovery 
-
-MAC Address Enumeration 
-
-Discovered: 
-
-Active hosts on the subnet 
-
-Device information 
-
-Network accessibility 
-
- 
-
-3. Network Topology Mapping 
-
-Generated: 
-
-Network topology visualization 
-
-Device relationship mapping 
-
-Infrastructure overview 
-
- 
-
-📊 Key Findings 
-
-Finding 
-
-Description 
-
-Technology Exposure 
-
-Web technologies and plugin versions were publicly visible 
-
-IP Disclosure 
-
-Domain successfully resolved to a public IP address 
-
-HTTP Information Exposure 
-
-Server headers disclosed technical details 
-
-WAF Detection 
-
-ModSecurity identified protecting the web application 
-
-DNS Exposure 
-
-DNS records revealed infrastructure information 
-
-Live Hosts Detected 
-
-Multiple active hosts discovered in the local environment 
-
- 
-
-⚠️ Risk Analysis 
-
-Risk 
-
-Potential Impact 
-
-Technology Fingerprinting 
-
-Facilitates targeted attacks 
-
-Infrastructure Disclosure 
-
-Reveals network architecture 
-
-DNS Enumeration 
-
-Provides reconnaissance intelligence 
-
-Header Exposure 
-
-Assists attacker profiling efforts 
-
-Network Device Visibility 
-
-Identifies active systems for further assessment 
-
-Public Information Exposure 
-
-Expands attack surface awareness 
-
-Important: These observations are informational findings and do not represent confirmed vulnerabilities. Further authorized testing would be required to determine exploitability. 
-
- 
-
-✅ Recommendations 
-
-Web Security 
-
-Minimize technology exposure. 
-
-Regularly update CMS platforms and plugins. 
-
-Review publicly accessible application metadata. 
-
-Reduce unnecessary HTTP header disclosures. 
-
-DNS Security 
-
-Review DNS records periodically. 
-
-Remove obsolete entries. 
-
-Monitor publicly exposed services. 
-
-Network Security 
-
-Conduct regular internal network scans. 
-
-Maintain accurate asset inventories. 
-
-Investigate unknown devices promptly. 
-
-Update network diagrams regularly. 
-
-Security Operations 
-
-Continuously monitor WAF effectiveness. 
-
-Perform periodic vulnerability assessments. 
-
-Ensure testing activities remain within authorized scope. 
-
- 
-
-🎓 Learning Outcomes 
-
-Throughout this project I gained practical experience in: 
-
-Reconnaissance methodology 
-
-Open-source intelligence gathering (OSINT) 
-
-Domain and DNS enumeration 
-
-Web application fingerprinting 
-
-Infrastructure discovery 
-
-Network scanning and host enumeration 
-
-Risk assessment 
-
-Professional cybersecurity reporting 
-
-This exercise highlighted the importance of information gathering as a foundational phase of penetration testing and demonstrated how publicly available information can contribute significantly to understanding an organization's attack surface. 
-
- 
-
-📂 Repository Structure 
-
-1     . 
-
-2     ├── README.md 
-
-3     ├── Report/ 
-
-4     │   └── W2-PM-FINAL-Report.pdf 
-
-5     ├── Screenshots/ 
-
-6     │   ├── whois.png 
-
-7     │   ├── whatweb.png 
-
-8     │   ├── nslookup.png 
-
-9     │   ├── curl.png 
-
-10     │   ├── wafw00f.png 
-
-11     │   ├── dnsrecon.png 
-
-12     │   └── zenmap.png 
-
-13     └── Evidence/ 
-
- 
- 
-
-📜 Conclusion 
-
-This project successfully demonstrated the practical application of penetration testing methodologies during the reconnaissance and scanning phases. Through the use of industry-standard tools such as WHOIS, WhatWeb, DNSRecon, Wafw00f, and Zenmap, valuable insights were obtained regarding target infrastructure, publicly available information, and network visibility. 
-
-The experience reinforced the importance of conducting ethical, authorized security assessments and maintaining clear, professional documentation throughout the testing lifecycle. 
