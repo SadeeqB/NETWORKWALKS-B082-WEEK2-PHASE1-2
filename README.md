@@ -2,11 +2,8 @@
 
  
 
-🛡️ Penetration Testing Report 
+🛡️ Penetration Testing Report: Footprinting & Network Scanning Phases 
 
-Footprinting & Network Scanning Phases 
-
-https://img.shields.io/badge/Cybersecurity-Ethical%20Hacking-blue https://img.shields.io/badge/Kali-Linux-purple https://img.shields.io/badge/Zenmap-Network%20Scanning-green https://img.shields.io/badge/Status-Completed-success 
 
 👨‍💻 Author 
 
