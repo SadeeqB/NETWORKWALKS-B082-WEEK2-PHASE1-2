@@ -46,10 +46,7 @@ The objective was to learn how security professionals and ethical hackers perfor
 
 ## Disclaimer
 
-⚠️ **Important:** All activities documented in this repository were performed only on systems that I:
-
-- Own, or
-- Have explicit written permission to test
+⚠️ **Important:** All activities documented in this repository were performed only on systems that I Own, or Have explicit written permission to test.
 
 This project is strictly for **educational, training, and research purposes only**. Unauthorized scanning, probing, or access to systems you do not own or have permission to test may violate applicable laws and regulations.
 
